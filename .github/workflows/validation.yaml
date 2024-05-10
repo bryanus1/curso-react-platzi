@@ -30,6 +30,7 @@ jobs:
             ${{ runner.os }}-node-
 
   lint:
+    needs: install
     runs-on: ubuntu-latest
 
     steps:
@@ -53,6 +54,7 @@ jobs:
         run: npm run lint
 
   test:
+    needs: install
     runs-on: ubuntu-latest
 
     steps:
